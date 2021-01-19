@@ -5,6 +5,7 @@
                 "id": 1,
                 "people": 3,
                 "max_people": 10,
+                "sport": "Futbol",
                 "location": "Ontinyent",
                 "field": "Polideportivo"
             }
@@ -14,6 +15,7 @@
                 "id": 2,
                 "people": 6,
                 "max_people": 13,
+                "sport": "Futbol",
                 "location": "Albaida",
                 "field": "Polideportivo"
             }
@@ -23,6 +25,7 @@
                 "id": 3,
                 "people": 4,
                 "max_people": 9,
+                "sport": "Futbol",
                 "location": "Benissoda",
                 "field": "Polideportivo"
             }
@@ -32,6 +35,7 @@
                 "id": 4,
                 "people": 10,
                 "max_people": 10,
+                "sport": "Futbol",
                 "location": "Valencia",
                 "field": "Polideportivo"
             }
@@ -41,6 +45,7 @@
                 "id": 5,
                 "people": 6,
                 "max_people": 10,
+                "sport": "Futbol",
                 "location": "Xativa",
                 "field": "Polideportivo"
             }

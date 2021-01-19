@@ -16,6 +16,9 @@ class GamesList extends Component {
                     {t.game.location}
                   </IonCardSubtitle>
                   <IonCardTitle>
+                      {t.game.sport}
+                  </IonCardTitle>
+                  <IonCardTitle>
                       {t.game.field}
                   </IonCardTitle>
                   <IonCardContent>

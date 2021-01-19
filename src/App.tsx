@@ -68,7 +68,12 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
-            <Route path="/games" component={Games} exact={true} />
+            <Route path="/games" component={() => {
+              if (!localStorage.getItem("user")) {
+                return <Redirect to="/login"/>;
+              }
+              return <Games/>
+            }} exact={true} />
             <Route path="/gamesmap" component={GamesMap} exact={true} />
             <Route path="/contact" component={Contact} />
             <Route path="/login" component={Auth} />
