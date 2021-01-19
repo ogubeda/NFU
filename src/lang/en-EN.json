@@ -1,0 +1,11 @@
+{
+    "en": {
+        "translation": {
+          "games": "Games",
+          "map": "Games Map",
+          "contact": "Contact",
+          "login": "Log In",
+          "profile": "Profile"
+        }
+      }
+}
