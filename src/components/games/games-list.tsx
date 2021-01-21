@@ -4,10 +4,8 @@ import { IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle }
 
 
 class GamesList extends Component {
-
   render() {
-
-    return (
+        return (
       <header>
           {games.games.map((t, k) =>
               <IonCard>

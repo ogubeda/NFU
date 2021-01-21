@@ -1,5 +1,4 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
@@ -11,12 +10,9 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
-import Games from './pages/Games';
-import GamesMap from './pages/GamesMap';
-import Profile from './pages/Profile';
-import Contact from './pages/Contact';
-import Auth from './pages/Auth';
 import i18n from "i18next";
+
+import Router from './route/Router'
 
 import {useTranslation, initReactI18next} from "react-i18next";
 
@@ -39,6 +35,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { AppContextProvider } from './state';
 
 
 i18n
@@ -63,22 +60,14 @@ i18n
 const App: React.FC = () => {
   const {t} = useTranslation();
 
+
   return (
+    <AppContextProvider>
     <IonApp>
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
-            <Route path="/games" component={() => {
-              if (!localStorage.getItem("user")) {
-                return <Redirect to="/login"/>;
-              }
-              return <Games/>
-            }} exact={true} />
-            <Route path="/gamesmap" component={GamesMap} exact={true} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/login" component={Auth} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/" render={() => <Redirect to="/games" />} exact={true} />
+            <Router/>
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
             <IonTabButton tab="games" href="/games">
@@ -105,6 +94,7 @@ const App: React.FC = () => {
         </IonTabs>
       </IonReactRouter>
     </IonApp>
+    </AppContextProvider>
   );
 }
   
